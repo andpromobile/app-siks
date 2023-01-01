@@ -1,0 +1,41 @@
+ERROR - 2022-12-19 20:57:21 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Program\laragon\www\app-siks\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\Program\laragon\www\app-siks\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Program\laragon\www\app-siks\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Program\laragon\www\app-siks\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Program\laragon\www\app-siks\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Program\laragon\www\app-siks\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Program\laragon\www\app-siks\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Program\laragon\www\app-siks\app\Controllers\Anggota.php(39): CodeIgniter\BaseModel->findAll()
+#7 D:\Program\laragon\www\app-siks\system\CodeIgniter.php(927): App\Controllers\Anggota->getAll()
+#8 D:\Program\laragon\www\app-siks\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 D:\Program\laragon\www\app-siks\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Program\laragon\www\app-siks\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Program\laragon\www\app-siks\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\Program\laragon\www\app-siks\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Program\laragon\www\app-siks\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Program\laragon\www\app-siks\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Program\laragon\www\app-siks\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Program\laragon\www\app-siks\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Program\laragon\www\app-siks\app\Controllers\Anggota.php(39): CodeIgniter\BaseModel->findAll()
+#6 D:\Program\laragon\www\app-siks\system\CodeIgniter.php(927): App\Controllers\Anggota->getAll()
+#7 D:\Program\laragon\www\app-siks\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 D:\Program\laragon\www\app-siks\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Program\laragon\www\app-siks\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-12-19 20:57:21 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(39): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Anggota->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
